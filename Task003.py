@@ -13,11 +13,13 @@ def input_number(text):
             print("Это не натуральное число! Повторите ввод")
     return number
 
+
 def fill_list(n, border_min, border_max) -> list:
     list = [random.randint(border_min, border_max)]
-    for i in range (1, n):
-        list.append(random.randint(border_min, border_max)) 
+    for i in range(1, n):
+        list.append(random.randint(border_min, border_max))
     return list
+
 
 def unique_list(list) -> list:
     result_list = [list[0]]
@@ -28,6 +30,7 @@ def unique_list(list) -> list:
             elif j == len(result_list)-1:
                 result_list.append(list[i])
     return result_list
+
 
 n = input_number("Введите количество элементов списка случайных чисел: ")
 border_min = input_number("Введите нижнюю границу значений элементов списка: ")
